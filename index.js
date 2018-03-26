@@ -21,7 +21,7 @@ Module._resolveFilename = function (path) {
 
   var name = path.split('/')[0]
   debug('downloading package: %s', name)
-  execFile('npm', ['install', name])
+  execFile('npm', ['install', '--save', name])
 
   return resolve.apply(Module, arguments)
 }
